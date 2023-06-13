@@ -18,7 +18,8 @@
                 <MenuItem Header="공학용"/>
                 <MenuItem Header="프로그래머용"/>
             </MenuItem>
-            <MenuItem Header="끝내기"/>
+            <MenuItem Header="끝내기"
+                      Click="MenuCloseClick"/>
         </Menu>
         <!--결과 창-->
         <Grid Height="100"
@@ -31,6 +32,7 @@
                      Text=""
                      BorderThickness="0"
                      Background="WhiteSmoke"
+                     Name="txtExp"
                      ></TextBox>
             <TextBox FontSize="36" 
                      FontWeight="Bold"
@@ -40,12 +42,13 @@
                      Text="0"
                      BorderThickness="0"
                      Background="WhiteSmoke"
+                     Name="txtResult"
                      ></TextBox>
             
         </Grid>
         <!--memory-->
         <Grid DockPanel.Dock="Top"
-              Height="50"
+              Height="30"
               >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -60,6 +63,8 @@
                     FontWeight="Bold"
                     Background="WhiteSmoke"
                     BorderThickness="0"
+                    Name="btnMC"
+                    Click="btnMCClick"
                     />
             <Button Grid.Column="1" 
                     Content="MR"
@@ -67,6 +72,8 @@
                     FontWeight="Bold"
                     Background="WhiteSmoke"
                     BorderThickness="0"
+                    Name="btnMR"
+                    Click="btnMRClick"
                     />
             <Button Grid.Column="2" 
                     Content="M+"
@@ -74,6 +81,8 @@
                     FontWeight="Bold"
                     Background="WhiteSmoke"
                     BorderThickness="0"
+                    Name="btnMPlus"
+                    Click="btnMPlusClick"
                     />
             <Button Grid.Column="3" 
                     Content="M-"
@@ -81,6 +90,8 @@
                     FontWeight="Bold"
                     Background="WhiteSmoke"
                     BorderThickness="0"
+                    Name="btnMMinus"
+                    Click="btnMMinusClick"
                     />
             <Button Grid.Column="4" 
                     Content="MS"
@@ -88,6 +99,8 @@
                     FontWeight="Bold"
                     Background="WhiteSmoke"
                     BorderThickness="0"
+                    Name="btnMSave"
+                    Click="btnMSaveClick"
                     />
         </Grid>
         <!--buttons-->
@@ -112,24 +125,31 @@
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnPercent"
                     >%</Button>
             <Button Grid.Row="0"
                     Grid.Column="1"
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnSqrt"
+                    Click="btnSqrtClick"
                     >√</Button>
             <Button Grid.Row="0"
                     Grid.Column="2"
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnSqr"
+                    Click="btnSqrClick"
                     >x²</Button>
             <Button Grid.Row="0"
                     Grid.Column="3"
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnRecip"
+                    Click="btnRecipClick"
                     >x/1</Button>
             <!--line 2-->
             <Button Grid.Row="1"
@@ -137,24 +157,32 @@
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnCE"
+                    Click="btnCEClick"
                     >CE</Button>
             <Button Grid.Row="1"
                     Grid.Column="1"
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnC"
+                    Click="btnCClick"
                     >C</Button>
             <Button Grid.Row="1"
                     Grid.Column="2"
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnDelete"
+                    Click="btnDeleteClick"
                     >⨂</Button>
             <Button Grid.Row="1"
                     Grid.Column="3"
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnDivide"
+                    Click="btnOpClick"
                     >÷</Button>
             <!--line 3-->
             <Button Grid.Row="2"
@@ -163,6 +191,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn7"
+                    Click="btnClick"
                     >7</Button>
             <Button Grid.Row="2"
                     Grid.Column="1"
@@ -170,6 +200,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn8"
+                    Click="btnClick"
                     >8</Button>
             <Button Grid.Row="2"
                     Grid.Column="2"
@@ -177,12 +209,16 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn9"
+                    Click="btnClick"
                     >9</Button>
             <Button Grid.Row="2"
                     Grid.Column="3"
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnTimes"
+                    Click="btnOpClick"
                     >×</Button>
             <!--line 4-->
             <Button Grid.Row="3"
@@ -191,6 +227,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn4"
+                    Click="btnClick"
                     >4</Button>
             <Button Grid.Row="3"
                     Grid.Column="1"
@@ -198,6 +236,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn5"
+                    Click="btnClick"
                     >5</Button>
             <Button Grid.Row="3"
                     Grid.Column="2"
@@ -205,12 +245,16 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn6"
+                    Click="btnClick"
                     >6</Button>
             <Button Grid.Row="3"
                     Grid.Column="3"
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnMinus"
+                    Click="btnOpClick"
                     >-</Button>
             <!--line 5-->
             <Button Grid.Row="4"
@@ -219,6 +263,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn1"
+                    Click="btnClick"
                     >1</Button>
             <Button Grid.Row="4"
                     Grid.Column="1"
@@ -226,6 +272,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn2"
+                    Click="btnClick"
                     >2</Button>
             <Button Grid.Row="4"
                     Grid.Column="2"
@@ -233,12 +281,16 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn3"
+                    Click="btnClick"
                     >3</Button>
             <Button Grid.Row="4"
                     Grid.Column="3"
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
+                    Name="btnPlus"
+                    Click="btnOpClick"
                     >+</Button>
             <!--line 6-->
             <Button Grid.Row="5"
@@ -247,6 +299,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btnPlusMinus"
+                    Click="btnPlusMinusClick"
                     >±</Button>
             <Button Grid.Row="5"
                     Grid.Column="1"
@@ -254,6 +308,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btn0"
+                    Click="btnClick"
                     >0</Button>
             <Button Grid.Row="5"
                     Grid.Column="2"
@@ -261,6 +317,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="WhiteSmoke"
+                    Name="btnDot"
+                    Click="btnDotClick"
                     >.</Button>
             <Button Grid.Row="5"
                     Grid.Column="3"
@@ -268,6 +326,8 @@
                     FontSize="18"
                     BorderThickness="0"
                     Background="DeepSkyBlue"
+                    Name="btnEqual"
+                    Click="btnEqualClick"
                     >=</Button>
         </Grid>
     </DockPanel>
