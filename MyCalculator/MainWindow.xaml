@@ -5,8 +5,271 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Calculator" Height="580" Width="400"
+        MinHeight="580" MinWidth="400">
 
-    </Grid>
+    <DockPanel LastChildFill="True">
+        <!--Menu-->
+        <Menu Padding="5"
+              DockPanel.Dock="Top"
+              Background="WhiteSmoke">
+            <MenuItem Header="선택">
+                <MenuItem Header="표준"/>
+                <MenuItem Header="공학용"/>
+                <MenuItem Header="프로그래머용"/>
+            </MenuItem>
+            <MenuItem Header="끝내기"/>
+        </Menu>
+        <!--결과 창-->
+        <Grid Height="100"
+              DockPanel.Dock="Top"
+              Background="WhiteSmoke"
+              >
+            <TextBox FontSize="16" 
+                     HorizontalAlignment="Right"
+                     Margin="15"
+                     Text=""
+                     BorderThickness="0"
+                     Background="WhiteSmoke"
+                     ></TextBox>
+            <TextBox FontSize="36" 
+                     FontWeight="Bold"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Bottom"
+                     Margin="15"
+                     Text="0"
+                     BorderThickness="0"
+                     Background="WhiteSmoke"
+                     ></TextBox>
+            
+        </Grid>
+        <!--memory-->
+        <Grid DockPanel.Dock="Top"
+              Height="50"
+              >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" 
+                    Content="MC"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Background="WhiteSmoke"
+                    BorderThickness="0"
+                    />
+            <Button Grid.Column="1" 
+                    Content="MR"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Background="WhiteSmoke"
+                    BorderThickness="0"
+                    />
+            <Button Grid.Column="2" 
+                    Content="M+"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Background="WhiteSmoke"
+                    BorderThickness="0"
+                    />
+            <Button Grid.Column="3" 
+                    Content="M-"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Background="WhiteSmoke"
+                    BorderThickness="0"
+                    />
+            <Button Grid.Column="4" 
+                    Content="MS"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Background="WhiteSmoke"
+                    BorderThickness="0"
+                    />
+        </Grid>
+        <!--buttons-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--line 1-->
+            <Button Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >%</Button>
+            <Button Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >√</Button>
+            <Button Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >x²</Button>
+            <Button Grid.Row="0"
+                    Grid.Column="3"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >x/1</Button>
+            <!--line 2-->
+            <Button Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >CE</Button>
+            <Button Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >C</Button>
+            <Button Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >⨂</Button>
+            <Button Grid.Row="1"
+                    Grid.Column="3"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >÷</Button>
+            <!--line 3-->
+            <Button Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >7</Button>
+            <Button Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >8</Button>
+            <Button Grid.Row="2"
+                    Grid.Column="2"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >9</Button>
+            <Button Grid.Row="2"
+                    Grid.Column="3"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >×</Button>
+            <!--line 4-->
+            <Button Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >4</Button>
+            <Button Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >5</Button>
+            <Button Grid.Row="3"
+                    Grid.Column="2"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >6</Button>
+            <Button Grid.Row="3"
+                    Grid.Column="3"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >-</Button>
+            <!--line 5-->
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >1</Button>
+            <Button Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >2</Button>
+            <Button Grid.Row="4"
+                    Grid.Column="2"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >3</Button>
+            <Button Grid.Row="4"
+                    Grid.Column="3"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    >+</Button>
+            <!--line 6-->
+            <Button Grid.Row="5"
+                    Grid.Column="0"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >±</Button>
+            <Button Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >0</Button>
+            <Button Grid.Row="5"
+                    Grid.Column="2"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="WhiteSmoke"
+                    >.</Button>
+            <Button Grid.Row="5"
+                    Grid.Column="3"
+                    Margin="2, 1, 1, 1"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Background="DeepSkyBlue"
+                    >=</Button>
+        </Grid>
+    </DockPanel>
+    
 </Window>
