@@ -5,21 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyCalculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="580" Width="400"
-        MinHeight="580" MinWidth="400">
+        Title="Calculator" Height="580" Width="350"
+        MinHeight="580" MinWidth="350">
 
     <DockPanel LastChildFill="True">
         <!--Menu-->
         <Menu Padding="5"
               DockPanel.Dock="Top"
-              Background="WhiteSmoke">
-            <MenuItem Header="선택">
-                <MenuItem Header="표준"/>
-                <MenuItem Header="공학용"/>
-                <MenuItem Header="프로그래머용"/>
+              Background="LightGray"
+              >
+            <MenuItem Header="Calculator">
+                <MenuItem Header="Standard"/>
+                <MenuItem Header="Scientific"/>
+                <MenuItem Header="Programmer"/>
+                <MenuItem Header="Date calculation"/>
             </MenuItem>
-            <MenuItem Header="끝내기"
-                      Click="MenuCloseClick"/>
+            <MenuItem Header="Converter">
+                <MenuItem Header="Currency"/>
+                <MenuItem Header="Volume"/>
+                <MenuItem Header="Length"/>
+                <MenuItem Header="Weight and mass"/>
+                <MenuItem Header="Temperature"/>
+                <MenuItem Header="Energy"/>
+                <MenuItem Header="Area"/>
+                <MenuItem Header="Speed"/>
+                <MenuItem Header="Time"/>
+                <MenuItem Header="Power"/>
+                <MenuItem Header="Data"/>
+                <MenuItem Header="Pressure"/>
+                <MenuItem Header="Angle"/>
+            </MenuItem>
         </Menu>
         <!--결과 창-->
         <Grid Height="100"
@@ -325,7 +340,7 @@
                     Margin="2, 1, 1, 1"
                     FontSize="18"
                     BorderThickness="0"
-                    Background="DeepSkyBlue"
+                    Background="DodgerBlue"
                     Name="btnEqual"
                     Click="btnEqualClick"
                     >=</Button>

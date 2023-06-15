@@ -173,11 +173,5 @@ namespace MyCalculator
             btnMC.IsEnabled = true;
             btnMR.IsEnabled = true;
         }
-
-        //끝내기 처리
-        private void MenuCloseClick(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
     }
 }
